@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/waitPage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/chrome_yellow"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/countDown"
+            android:layout_width="187dp"
+            android:layout_height="164dp"
+            android:layout_marginStart="176dp"
+            android:layout_marginTop="300dp"
+            android:layout_marginEnd="177dp"
+            android:layout_marginBottom="300dp"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/resultPage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/chrome_yellow"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="303dp"
+            android:layout_height="71dp"
+            android:layout_marginStart="160dp"
+            android:layout_marginTop="169dp"
+            android:layout_marginEnd="160dp"
+            android:layout_marginBottom="543dp"
+            android:text="Your Score"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="60sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/finalScore"
+            android:layout_width="204dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="160dp"
+            android:layout_marginTop="98dp"
+            android:layout_marginEnd="160dp"
+            android:layout_marginBottom="374dp"
+            android:text="0/0"
+            android:textAlignment="center"
+            android:textColor="@color/teal_700"
+            android:textSize="50sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="130dp"
+            android:layout_marginTop="131dp"
+            android:layout_marginEnd="130dp"
+            android:layout_marginBottom="195dp"
+            android:background="@color/black"
+            android:onClick="play"
+            android:text="Play Again"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/finalScore" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/gamePage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/chrome_yellow"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="409dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:background="@color/chrome_yellow"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/celebImage"
+                android:layout_width="match_parent"
+                android:layout_height="370dp"
+                android:layout_margin="5dp"
+                android:layout_weight= "1"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/option1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@color/black"
+                android:onClick="check"
+                android:tag="0"
+                android:text="Button"
+                android:textColor="@color/white"
+                android:layout_weight= "1"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/option2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@color/black"
+                android:onClick="check"
+                android:tag="1"
+                android:text="Button"
+                android:textColor="@color/white"
+                android:layout_weight= "1"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/option3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@color/black"
+                android:onClick="check"
+                android:tag="2"
+                android:text="Button"
+                android:textColor="@color/white"
+                android:layout_weight= "1"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/option4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@color/black"
+                android:onClick="check"
+                android:tag="3"
+                android:text="Button"
+                android:textColor="@color/white"
+                android:layout_weight= "1"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/Score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="333dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="21dp"
+            android:layout_marginBottom="12dp"
+            android:text="0/0"
+            android:textColor="@color/teal_700"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="333dp"
+            android:layout_marginBottom="12dp"
+            android:text="30s"
+            android:textColor="@color/teal_700"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/startPage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/chrome_yellow"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+            android:id="@+id/gameName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="611dp"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            android:text="Guess The Celebrity"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/manImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="185dp"
+            android:alpha="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gameName"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/man" />
+
+        <ImageView
+            android:id="@+id/questionMark"
+            android:layout_width="119dp"
+            android:layout_height="163dp"
+            android:layout_marginBottom="69dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.895"
+            app:srcCompat="@drawable/questionmark" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/play"
+            android:layout_width="117dp"
+            android:layout_height="105dp"
+            android:layout_marginTop="75dp"
+            android:alpha="0"
+            android:background="@drawable/play"
+            android:onClick="play"
+            android:shadowColor="@color/light_font"
+            android:shadowDx="0.0"
+            android:shadowDy="0.0"
+            android:shadowRadius="8"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gameName" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
